@@ -1,0 +1,6 @@
+﻿@Code
+    ViewBag.Title = "Error de inicio de sesión"
+End Code
+
+<h2>@ViewBag.Title.</h2>
+<h3 class="text-error">El inicio de sesión con el servicio no se ha llevado a cabo correctamente.</h3>
