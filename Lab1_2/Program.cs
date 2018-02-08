@@ -40,6 +40,8 @@ namespace Lab1_2
                         else
                             return false;
             });
+            Libro paraEliminar = Lista.Where(variable => variable.ID == 1).First();
+            Lista.Remove(paraEliminar);
             Console.ReadKey();
         }
         static bool EsPrimeraEdicion(Libro libro)
