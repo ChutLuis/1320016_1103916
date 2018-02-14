@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title - Estructura de datos</title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+        }
+
+        h1 {
+            background:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1> Carga de datos: </h1>
+    <li> @Html.ActionLink("Automática (Archivo *.CSV)", "CargaCsv", "Home")</li>
+    <li> Manual </li>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Laboratorio 1</p>
+    </footer>
+
+</body>
+</html>
