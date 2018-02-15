@@ -114,6 +114,10 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\CargaCsv.cshtml" />
+    <Content Include="Views\Home\TipoLista.cshtml" />
+    <Content Include="Views\Home\OrdenarLista.cshtml" />
+    <Content Include="Views\Home\Manual.cshtml" />
+    <Content Include="Views\Home\TablaManual.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

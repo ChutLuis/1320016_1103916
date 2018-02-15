@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace Laboratorio1_1103916_1320016.Controllers
 {
     public class HomeController : Controller
     {
+        List<PlayersModel> Jugadores = new List<PlayersModel>();
         // GET: Home
         public ActionResult Index()
         {
@@ -67,7 +69,40 @@ namespace Laboratorio1_1103916_1320016.Controllers
                     }
                 }
             }
+            Jugadores = Players;
             return View(Players);
+        }
+
+        public ActionResult TipoLista()
+        {
+            return View();
+        }
+
+        public ActionResult OrdenarLista()
+        {
+            Jugadores.Sort();
+            return View(Jugadores);
+        }
+
+        public ActionResult Manual()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Manual([Bind(Include = "Equipo,Apellido,Nombre,Posición,SalarioBase,Compensacion")]PlayersModel jugador)
+        {
+            if (ModelState.IsValid)
+            {
+                Jugadores.Add(jugador);
+                return RedirectToAction("TablaManual");
+            }
+            return View(jugador);
+        }
+
+        public ActionResult TablaManual()
+        {
+            return View(new List<PlayersModel>());
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TipoLista</title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+        }
+
+        h1 {
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1> Seleccione tipo de lista: </h1>
+    <li> @Html.ActionLink("Lista C#", "CargaCsv", "Home")</li>
+    <li> @Html.ActionLink("Artesanal", "CargaCsv", "Home")</li>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Laboratorio 1</p>
+    </footer>
+</body>
+</html>

@@ -18,6 +18,10 @@
             font-size: 10pt;
         }
 
+        h1 {
+            alignment: center;
+        }
+
         h2 {
             background: greenyellow;
         }
@@ -45,7 +49,10 @@
     </style>
 </head>
 <body>
-    <h2>@Html.ActionLink(" < Regresar", "Index", "Home")</h2>
+    <h2>
+        <li>@Html.ActionLink(" Regresar", "Index", "Home")</li>
+    </h2>
+    <h1>Información de Jugadores MLS</h1>
     @using (Html.BeginForm("CargaCsv", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <input type="file" name="postedFile" />
