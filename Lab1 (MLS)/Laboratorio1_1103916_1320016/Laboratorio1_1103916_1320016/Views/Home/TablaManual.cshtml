@@ -1,0 +1,79 @@
+﻿@using Laboratorio1_1103916_1320016.Models
+@using Laboratorio1_1103916_1320016.Controllers
+@model IEnumerable<PlayersModel>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TablaManual</title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+            font-size: 10pt;
+        }
+
+        h1 {
+            alignment: center;
+        }
+
+        h2 {
+            background: greenyellow;
+        }
+
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        table th {
+            background-color: #B8DBFD;
+            color: #333;
+            font-weight: bold;
+        }
+
+        table th, table td {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        table, table td {
+            border: 0px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<h2>
+    <li>@Html.ActionLink(" Regresar", "Index", "Home")</li>
+</h2>
+<hr />
+<table cellpadding="0" cellspacing="0">
+    <tr>
+        <th>Equipo</th>
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>Posición</th>
+        <th>Salario</th>
+        <th>Compensación</th>
+    </tr>
+    @foreach (PlayersModel player in Model)
+    {
+        <tr>
+            <td>@player.Equipo</td>
+            <td>@player.Apellido</td>
+            <td>@player.Nombre</td>
+            <td>@player.Posición</td>
+            <td>@player.SalarioBase</td>
+            <td>@player.Compensación</td>
+        </tr>
+    }
+</table>
+</body>
+</html>
