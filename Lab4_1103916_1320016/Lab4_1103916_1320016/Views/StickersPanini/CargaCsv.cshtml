@@ -1,0 +1,17 @@
+﻿@model Lab4_1103916_1320016.Models.StickersPanini
+
+@{
+    ViewBag.Title = "CargaCsv";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Información de álbum panini</h1>
+@using (Html.BeginForm("CargaCsv", "StickersPanini", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="postedFile" />
+    <input type="submit" value="Import" />
+}
+@Html.Label(TempData ["diccionario"].ToString())
+
+<h2>CargaCsv</h2>
+
